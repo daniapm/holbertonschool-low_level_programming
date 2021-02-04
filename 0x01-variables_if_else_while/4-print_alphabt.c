@@ -9,7 +9,10 @@ int main(void)
 int letraInicial;
 for (letraInicial = 97; letraInicial <= 122; letraInicial++)
 {
-putchar(letraInicial, DEL '111,113');
+if (!(letraInicial == 101 || letraInicial == 113))
+{
+putchar(letraInicial);
+}
 }
 putchar('\n');
 return (0);
