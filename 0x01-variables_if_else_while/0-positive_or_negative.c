@@ -4,7 +4,7 @@
 
 /* betty style doc for function main goes there */
 /**
- * main - principal
+ * main principal
  *
  * Return: 0 always
  **/
