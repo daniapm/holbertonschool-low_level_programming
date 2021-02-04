@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 /**
  * main - Entry point
  *
@@ -7,8 +7,8 @@
  */
 int main(void)
 {
-int letraInicial = 97;
-for (letraInicial; letraInicial <= 122; letraInicial++)
+int letraInicial;
+for (letraInicial = 97; letraInicial <= 122; letraInicial++)
 {
 putchar(letraInicial);
 putchar('\n');
