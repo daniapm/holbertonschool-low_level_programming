@@ -10,7 +10,7 @@ int letraInicial;
 for (letraInicial = 97; letraInicial <= 122; letraInicial++)
 {
 putchar(letraInicial);
-putchar('\n');
 }
+putchar('\n');
 return (0);
 }
