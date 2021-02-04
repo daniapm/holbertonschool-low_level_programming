@@ -13,17 +13,17 @@ n = rand() - RAND_MAX / 2;
 
 if (n > 0)
 {
-printf("the number is positive");
+printf(n+" is positive\n");
 }
 else
 {
 if (n == 0)
 {
-printf("the number is zero");
+printf(n+" is zero\n");
 }
 else
 {
-printf("the number is negative");
+printf("is negative\n");
 }
 }
 return (0);
