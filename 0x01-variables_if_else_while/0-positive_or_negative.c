@@ -4,9 +4,9 @@
 
 /* betty style doc for function main goes there */
 /**
- * main - Entry point
+ * main:principal
  *
- * Return: Always 0 (Success)
+ * Return: 0
  **/
 int main(void)
 {
