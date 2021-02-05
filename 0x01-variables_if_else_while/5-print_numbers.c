@@ -12,5 +12,6 @@ while (numeros < 10)
 printf("%d", numeros);
 numeros++;
 }
+printf("\n");
 return (0);
 }
