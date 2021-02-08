@@ -1,0 +1,26 @@
+#include <unistd.h>
+#include <stdio.h>
+
+/**
+ * main - check the code for Holberton School students.
+ * print_alphabet - Función donde se ejecuta la lógica del programa.
+ * Return: Always 0.
+ */
+void print_alphabet(void)
+{
+int letras, repeticion;
+for (repeticion = 1; repeticion <= 10; repeticion++)
+{
+for (letras = 97; letras <= 122; letras++)
+{
+putchar(letras); /* imprime la cadena */
+putchar(repeticion);
+}
+}
+return; /* sale de la función */
+}
+int main(void)
+{
+print_alphabet();
+return (0);
+}
