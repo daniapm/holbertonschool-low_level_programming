@@ -17,14 +17,14 @@ for (hora2 = 48; hora2 <= 53; hora2++)
 {
 for (hora3 = 48; hora3 <= 57; hora3++)
 {
-if (!(hora == 50 && hora1 > 3))
+if (!(hora == 50 && hora1 > 51))
 {
-putchar (hora);
-putchar (hora1);
-putchar (58);
-putchar (hora2);
-putchar (hora3);
-putchar (58);
+_putchar (hora);
+_putchar (hora1);
+_putchar (58);
+_putchar (hora2);
+_putchar (hora3);
+_putchar ('\n');
 }
 }
 }
