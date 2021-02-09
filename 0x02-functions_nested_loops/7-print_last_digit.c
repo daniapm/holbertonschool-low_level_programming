@@ -1,15 +1,21 @@
 #include "holberton.h"
 
 /**
- * print_last_digit - the last digit
- * @numero1: entero
- * main - Return
- * Description: islower
- * Return: 0 or 1
+ * print_last_digit - prints last digit of integer input
+ * @n: integer to modify
+ *
+ * Return: l
  */
-int print_last_digit(int numero1)
+
+
+int print_last_digit(int n)
 {
-int ultimo;
-ultimo = numero1 % 10;
-return (ultimo);
+int l, p;
+
+l = n % 10;
+if (l <  0)
+l = -l;
+p = '0' + l;
+_putchar(p);
+return (l);
 }
