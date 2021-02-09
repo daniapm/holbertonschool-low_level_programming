@@ -1,0 +1,27 @@
+#include "holberton.h"
+#include <stdio.h>
+
+/**
+ * times_table - prints every minute of the day
+ *
+ * Return: void
+ */
+
+void times_table(void)
+{
+int x, tabla, resultado;
+for (tabla = 0; tabla <= 9; tabla++)
+{
+for (x = 0; x <= 9; x++) 
+{
+resultado = x * tabla;
+printf ("%d", resultado);
+if (x != 9)
+{
+printf (",  ");
+}
+}
+putchar ('\n');
+}
+return;
+}
