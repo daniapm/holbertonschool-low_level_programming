@@ -1,9 +1,10 @@
-#include "holberton"
+#include "holberton.h"
 
 /**
  * _islower - checks for lowercase letters
  * @c: character
- *
+ * main - Return
+ * Description: islower
  * Return: 0 or 1
  */
 int _islower(int c)
@@ -15,4 +16,5 @@ return (1);
 else
 {
 return (0);
+}
 }
