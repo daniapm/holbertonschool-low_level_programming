@@ -1,26 +1,22 @@
-#include <unistd.h>
-#include <stdio.h>
+#include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
- * print_alphabet - Función donde se ejecuta la lógica del programa.
- * Return: Always 0.
+ * print_alphabet_x10 - checks for lowercase letters
+ *
+ * main - Return
+ *
+ * Return: 0 or 1
  */
-void print_alphabet(void)
+void print_alphabet_x10(void)
 {
 int letras, repeticion;
 for (repeticion = 1; repeticion <= 10; repeticion++)
 {
 for (letras = 97; letras <= 122; letras++)
 {
-putchar(letras); /* imprime la cadena */
+_putchar(letras);
 }
-putchar(10);
+_putchar(10);
 }
-return; /* sale de la función */
-}
-int main(void)
-{
-print_alphabet();
-return (0);
+return;
 }
