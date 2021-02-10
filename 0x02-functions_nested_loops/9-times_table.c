@@ -8,12 +8,13 @@
  */
 void times_table(void)
 {
-int numero, tabla, resultado;
+  int numero, tabla, resultado, comodin;
 for (numero = 0; numero <= 9; numero++)
 {
 for (tabla = 0; tabla <= 9; tabla++)
 {
 resultado = numero * tabla;
+comodin = numero * (tabla + 1);
 if (resultado < 10)
 {
 _putchar (resultado + '0');
@@ -25,7 +26,7 @@ _putchar (resultado % 10 + '0');
 }
 if (tabla != 9)
 {
-if (resultado <= 9)
+if (resultado <= 9 && comodin < 10)
 {
 _putchar (44);
 _putchar (32);
