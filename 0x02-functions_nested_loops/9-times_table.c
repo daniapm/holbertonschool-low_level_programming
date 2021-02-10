@@ -8,7 +8,7 @@
  */
 void times_table(void)
 {
-  int numero, tabla, resultado, comodin;
+int numero, tabla, resultado, comodin;
 for (numero = 0; numero <= 9; numero++)
 {
 for (tabla = 0; tabla <= 9; tabla++)
