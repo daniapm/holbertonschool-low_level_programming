@@ -21,10 +21,10 @@ else if (n > 98)
 {
 for (contador = n; contador >= 98; contador--)
 {
-printf ("%d", contador);
+printf("%d", contador);
 if (contador != 98)
 {
-printf (", ");
+printf(", ");
 }
 }
 putchar ('\n');
@@ -33,11 +33,11 @@ else
 {
 for (contador = n; contador <= 98; contador++)
 {
-printf ("%d", contador);
+printf("%d", contador);
 if (contador != 98)
-{ 
-printf (", ");
-} 
+{
+printf(", ");
+}
 }
 putchar ('\n');
 }
