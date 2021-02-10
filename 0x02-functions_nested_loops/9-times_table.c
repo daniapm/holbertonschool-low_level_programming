@@ -25,9 +25,17 @@ _putchar (resultado % 10 + '0');
 }
 if (tabla != 9)
 {
+if (resultado <= 9)
+{
 _putchar (44);
 _putchar (32);
 _putchar (32);
+}
+else
+{
+_putchar (44);
+_putchar (32);
+}
 }
 }
 _putchar (10);
