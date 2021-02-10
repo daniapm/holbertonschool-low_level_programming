@@ -1,27 +1,32 @@
-#include "holberton.h"
 #include <stdio.h>
+#include "holberton.h"
 
 /**
- * times_table - prints every minute of the day
+ * main - entry point
  *
- * Return: void
+ * Description: prints the numbers 1 - 100 w/
+ * Fizz for multiples of 3, Buzz for multiples of 5,
+ * and FizzBuzz for multiples of both
+ *
+ * Return: always 0
  */
+int main(void)
+{
+int i;
 
-void times_table(void)
+for (i = 1; i <= 100; i++)
 {
-int x, tabla, resultado;
-for (tabla = 0; tabla <= 9; tabla++)
-{
-for (x = 0; x <= 9; x++) 
-{
-resultado = x * tabla;
-printf ("%d", resultado);
-if (x != 9)
-{
-printf (",  ");
+if (i % 15 == 0)
+printf("FizzBuzz");
+else if (i % 3 == 0)
+printf("Fizz");
+else if (i % 5 == 0)
+printf("Buzz");
+else
+printf("%i", i);
+if (i < 100)
+printf(" ");
 }
-}
-putchar ('\n');
-}
-return;
+printf("\n");
+return (0);
 }
