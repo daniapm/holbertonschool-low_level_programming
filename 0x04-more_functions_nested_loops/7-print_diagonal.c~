@@ -18,9 +18,10 @@ for (espacio = 0; espacio < contador; espacio++)
 _putchar (32);
 }
 _putchar (92);
-if (contador != n - 1)
+if (contador == n -1)
 {
 _putchar (10);
+}
 }
 }
 _putchar (10);
