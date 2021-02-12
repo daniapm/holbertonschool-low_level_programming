@@ -1,28 +1,26 @@
 #include <stdio.h>
 
 /**
- * fizz_buzz - print fizz buzz
- *
- * main - Return
+ * main - print fizz buzz
  *
  * Return: 0
  */
-int main (void)
+int main(void)
 {
 int numeros;
 for (numeros = 1; numeros <= 100; numeros++)
 {
 if (numeros % 3 == 0)
 {
-printf ("Fizz");
+printf("Fizz");
 }
-if (numeros % 5 ==0)
+if (numeros % 5 == 0)
 {
-printf ("Buzz");
+printf("Buzz");
 }
 if (numeros % 3 != 0 && numeros % 5 != 0)
 {
-printf ("%d", numeros);
+printf("%d", numeros);
 }
 putchar (32);
 }
