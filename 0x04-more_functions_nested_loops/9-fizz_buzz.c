@@ -26,5 +26,6 @@ printf ("%d", numeros);
 }
 putchar (32);
 }
+putchar (10);
 return (0);
 }
