@@ -14,4 +14,5 @@ _putchar (*str);
 str += 2;
 }
 _putchar (10);
+return;
 }
