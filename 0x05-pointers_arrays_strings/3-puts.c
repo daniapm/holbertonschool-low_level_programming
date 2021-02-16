@@ -2,7 +2,7 @@
 
 
 /**
- * _puts - Write a function that prints a string.
+ * _puts - Write a function that prints a string, to stdout.
  * @str: variable
  * main - Return
  * Return: void
@@ -18,8 +18,8 @@ len++;
 }
 for (i = 0; i <= len; i++)
 {
-_putchar (*(str + i));
+_putchar (str[i]);
 }
-_putchar (10);
+_putchar ('\n');
 return;
 }
