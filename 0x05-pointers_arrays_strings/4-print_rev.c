@@ -9,13 +9,13 @@
 void print_rev(char *s)
 {
 int i;
-int len;
-len = 0;
-while (len[s] != 0)
+int contador;
+contador = 0;
+while (contador[s] != 0)
 {
-len++;
+contador++;
 }
-for (i = len; i >= 0; i--)
+for (i = contador; i >= 0; i--)
 {
 _putchar (s[i]);
 }
