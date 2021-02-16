@@ -4,7 +4,7 @@
 /**
  * _puts - Write a function that prints a string, to stdout.
  * @str: variable
- *
+ * Return: void
  */
 void _puts(char *str)
 {
