@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 
 /**
  * _puts - Write a function that prints a string, to stdout.
@@ -8,16 +7,10 @@
  */
 void _puts(char *str)
 {
-int i;
-int len;
-len = 0;
-while (str[len] != 0)
+while (*str)
 {
-len++;
+_putchar(*str);
+str++;
 }
-for (i = 0; i <= len; i++)
-{
-_putchar (str[i]);
-}
-_putchar ('\n');
+_putchar (10);
 }
