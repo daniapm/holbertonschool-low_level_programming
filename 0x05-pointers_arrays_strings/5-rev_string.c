@@ -1,22 +1,23 @@
 #include "holberton.h"
 #include <string.h>
-#include <stdio.h>
 
 /**
- * print_rev - rever
+ * rev_string - rever
  * @s: variable
  * main - Return
  * Return: void
  */
-void rev_string(char *s);
+void rev_string(char *s)
 {
 int size;
 int i;
-size = strlen(s);
+int contador = 0;
 for (i = size; i >= 0; i--)
 {
-s = (s[i]);
-_putchar (s);
+char rever[size];
+rever[contador] = s[i];
+contador++;
 }
+s = rever;
 return;
 }
