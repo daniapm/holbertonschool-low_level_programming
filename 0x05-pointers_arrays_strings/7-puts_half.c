@@ -9,22 +9,14 @@
 void puts_half(char *str)
 {
 int n;
-int size;
-int i;
-size = 0;
-while (str[size] != 0)
+while (*str)
 {
-size++;
+_putchar (*str);
+str++;
 }
-if (size % 2 != 0)
+if (*str % 2 != 0)
 {
-n = (size - 1) / 2;
-_putchar (size + '0');
-for (i = n; i <= size; i++)
-{
-_putchar(str[i]);
+n = (str - 1) / 2;
+_putchar (n);
 }
-}
-_putchar ('\n');
-return;
 }
