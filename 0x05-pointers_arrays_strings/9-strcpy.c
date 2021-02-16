@@ -11,12 +11,12 @@
 char *_strcpy(char *dest, char *src)
 {
 char *puntero = dest;
-while(*src != '\0')
+while (*src != '\0')
 {
 *puntero = *src;
 puntero++;
 src++;
 }
-*puntero ='\0';
-return dest;
+*puntero = '\0';
+return (dest);
 }
