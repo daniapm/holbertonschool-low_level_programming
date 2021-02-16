@@ -8,15 +8,15 @@
  * main - Return
  * Return: void
  */
-void print_rev(char *s)
+void rev_string(char *s);
 {
 int size;
 int i;
 size = strlen(s);
 for (i = size; i >= 0; i--)
 {
-_putchar(s[i]);
+s = (s[i]);
+_putchar (s);
 }
-printf("\n");
 return;
 }
