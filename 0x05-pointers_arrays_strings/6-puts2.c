@@ -8,17 +8,10 @@
  */
 void puts2(char *str)
 {
-int size;
-int i;
-size = 0;
-while (str[size] != 0)
+while (*str)
 {
-size++;
+_putchar (*str);
+str += 2;
 }
-for (i = 0; i <= size; i += 2)
-{
-_putchar (str[i]);
-}
-_putchar ('\n');
-return;
+_putchar (10);
 }
