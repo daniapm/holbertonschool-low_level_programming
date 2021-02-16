@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <string.h>
 
 /**
  * rev_string - rever
@@ -15,7 +14,7 @@ int contador = 0;
 for (i = size; i >= 0; i--)
 {
 char rever[size];
-rever[contador] = s[i];
+rever [contador] = s[i];
 contador++;
 }
 s = rever;

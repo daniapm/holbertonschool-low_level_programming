@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <string.h>
 
 /**
  * puts2 - prints every other character
@@ -11,7 +10,11 @@ void puts2(char *str)
 {
 int size;
 int i;
-size = strlen(str);
+size = 0;
+while (str[size] != 0)
+{
+size++;
+}
 for (i = 0; i <= size; i += 2)
 {
 _putchar (str[i]);
