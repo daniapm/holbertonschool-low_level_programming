@@ -3,7 +3,7 @@
 /**
  * puts2 - prints every other character
  * @str: variable
- * main - Return
+ * 
  * Return: void
  */
 void puts2(char *str)
@@ -14,5 +14,4 @@ _putchar (*str);
 str = str + 2;
 }
 _putchar (10);
-return;
 }
