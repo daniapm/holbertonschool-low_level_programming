@@ -11,7 +11,6 @@ void puts2(char *str)
 while (*str)
 {
 _putchar (*str);
-if (*str > 4)
 str += 2;
 }
 _putchar (10);
