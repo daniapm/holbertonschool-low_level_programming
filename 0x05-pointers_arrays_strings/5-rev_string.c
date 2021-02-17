@@ -8,15 +8,19 @@
  */
 void rev_string(char *s)
 {
-int size;
-int i;
-int contador = 0;
-for (i = size; i >= 0; i--)
+int a = 0, b = 0;
+char begin[1000];
+
+while (*(s + a))
 {
-char rever[size];
-rever [contador] = s[i];
-contador++;
+*(begin + a) = *(s + a);
+a++;
 }
-s = rever;
-return;
+a = a - 1;
+while (a >= 0)
+{
+*(s + a) = *(begin + b);
+b++;
+a--;
+}
 }
