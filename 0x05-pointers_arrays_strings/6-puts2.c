@@ -9,10 +9,11 @@
 
 void puts2(char *str)
 {
-while (*str)
+int contador = 0;
+while (*(str + contador))
 {
-_putchar (*str);
-str = str + 2;
+_putchar (*(str + contador));
+contador = contador + 2;
 }
-_putchar (10);
+_putchar ('\n');
 }
