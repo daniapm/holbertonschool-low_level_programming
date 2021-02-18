@@ -18,11 +18,11 @@ i = 0;
 }
 else if (s1 > s2)
 {
-i = 15;
+i = *s1 - *s2;
 }
 else
 {
-i = -15;
+i = *s1 - *s2;
 }
 return (i);
 }
