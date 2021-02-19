@@ -10,30 +10,19 @@
 
 char *leet(char *s)
 {
-int i = 0;
-while (s[i] != '\0')
+int i, j;
+char letras[] = "aAeEoOtTlL";
+char numeros[] = "4433007711";
+
+for (i = 0; s[i]; i++)
 {
-if (s[i] == 97 || s[i] == 65)
+for (j = 0; j <= 9; j++)
 {
-s[i] = 52;
+if (letras[j] == s[i])
+{
+s[i] = numeros[j];
 }
-else if (s[i] == 69 || s[i] == 101)
-{
-s[i] = 51;
 }
-else if (s[i] == 79 || s[i] == 111)
-{
-s[i] = 48;
-}
-else if (s[i] == 84 || s[i] == 116)
-{
-s[i] = 55;
-}
-else if (s[i] == 76 || s[i] == 108)
-{
-s[i] = 49;
-}
-i++;
 }
 return (s);
 }
