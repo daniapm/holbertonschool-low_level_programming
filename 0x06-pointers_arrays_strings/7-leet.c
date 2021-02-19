@@ -18,7 +18,7 @@ for (contador1 = 0; s[contador1]; contador1++)
 {
 for (contador2 = 0; contador2 <= 9; contador2++)
 {
-if (letras[contador1] == s[contador2])
+if (letras[contador2] == s[contador1])
 {
 s[contador1] = numeros[contador2];
 }
