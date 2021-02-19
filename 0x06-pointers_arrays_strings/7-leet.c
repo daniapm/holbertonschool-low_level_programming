@@ -10,17 +10,17 @@
 
 char *leet(char *s)
 {
-int i, j;
+int contador1, contador2;
 char letras[] = "aAeEoOtTlL";
 char numeros[] = "4433007711";
 
-for (i = 0; s[i]; i++)
+for (contador1 = 0; s[contador1]; contador1++)
 {
-for (j = 0; j <= 9; j++)
+for (contador2 = 0; contador2 <= 9; contador2++)
 {
-if (letras[j] == s[i])
+if (letras[contador1] == s[contador2])
 {
-s[i] = numeros[j];
+s[contador1] = numeros[contador2];
 }
 }
 }
