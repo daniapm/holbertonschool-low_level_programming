@@ -1,0 +1,23 @@
+#include "holberton.h"
+
+
+/**
+ * *string_toupper - concatenates two strings.
+ * @s: variable
+ * main - Return
+ * Return: void
+ */
+
+char *string_toupper(char *)
+{
+int i = 0;
+while (*[i] != '\0')
+{
+if (*[i] >= 97 && *[i] <= 122)
+{
+*[i] -= 32;
+}
+i++;
+}
+return (*);
+}
