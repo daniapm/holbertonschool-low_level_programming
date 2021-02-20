@@ -14,7 +14,6 @@ char root[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 int i, j;
 i = 0;
 j = 0;
- 
 for (i = 0; s[i]; i++)
 {
 for (j = 0; j < 52; j++)
