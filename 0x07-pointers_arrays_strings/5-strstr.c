@@ -11,15 +11,20 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-int contador;
-contador = 0;
-while (*(haystack + contador))
+char *inicio;
+for (inicio = haystack; *inicio != '\0'; inicio++)
 {
-if (*(needle) == *(haystack + contador))
+char *p = needle;
+char *q = inicio;
+while (*p != '\0' && *q != '\0' && *p == *q)
 {
-return (&haystack[contador]);
+p++;
+q++;
 }
-contador++;
+if (*p == '\0')
+{
+return (inicio);
+}
 }
 return (NULL);
 }
