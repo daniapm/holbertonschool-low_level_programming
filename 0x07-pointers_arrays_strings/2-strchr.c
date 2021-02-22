@@ -20,5 +20,5 @@ return (&s[contador]);
 }
 contador++;
 }
-return ('\0');
+return (NULL);
 }
