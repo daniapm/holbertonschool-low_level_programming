@@ -17,7 +17,6 @@ while (s[contador] != '\0')
 if (s[contador] == c)
 {
 return (&s[contador]);
-contador++;
 }
 contador++;
 }
