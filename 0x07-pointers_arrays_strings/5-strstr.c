@@ -21,6 +21,5 @@ return (&haystack[contador]);
 }
 contador++;
 }
-contador++;
 return (NULL);
 }
