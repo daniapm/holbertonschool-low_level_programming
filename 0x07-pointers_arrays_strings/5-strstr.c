@@ -17,7 +17,7 @@ while (haystack[contador] != '\0')
 {
 if (*(needle) == *(haystack + contador))
 {
-return (&haystack[contador]);
+return (&haystack[contador++]);
 }
 contador++;
 }
