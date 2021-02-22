@@ -13,13 +13,14 @@ char *_strstr(char *haystack, char *needle)
 {
 int contador;
 contador = 0;
-while (*haystack)
+while (haystack != '\0')
 {
 if (*(needle) == *(haystack + contador))
 {
-return (&haystack[contador++]);
+return (&haystack[contador]);
 }
 contador++;
 }
+contador++;
 return (NULL);
 }
