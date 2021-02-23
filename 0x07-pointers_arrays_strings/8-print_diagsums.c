@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
  * print_diagsums - prints number
@@ -10,18 +11,16 @@
 
 void print_diagsums(int *a, int size)
 {
-int i, j, diagonal1, diagonal2, cont;
-cont = 0;
-for (i = 0; i < size * size; i += size + 1)
+int filas, columnas, d, i;
+d = 0;
+i = 0;
+for (filas = 0; filas < size; filas++)
 {
-diagonal1 += a[i];
+i += (a + filas * size)[filas];
 }
-for (j = size - 1; j < size * size; j += size - 1)
+for (columnas = 0; columnas < size; columnas++)
 {
-if (cont < size)
-{
-diagonal2 += a[j];
+d += (a + columnas * size)[--filas];
 }
-}
-printf("%d, %d\n", diagonal1, diagonal2);
+printf("%d, %d\n", i, d);
 }
