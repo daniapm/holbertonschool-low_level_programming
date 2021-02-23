@@ -2,12 +2,20 @@
 
 
 /**
- * *_strpbrk -  locates a character in a string.
- * @s: variable
- * @accept: variable
+ * print_chessboard -  locates a character in a string.
+ * @a:variable
  * main - Return
  * Return: void
  */
 void print_chessboard(char (*a)[8])
 {
-  for (a)
+int i, j;
+for (i = 0; i < 8; i++)
+{
+for (j = 0; j < 8; j++)
+{
+_putchar (a[i][j]);
+}
+_putchar (10);
+}
+}
