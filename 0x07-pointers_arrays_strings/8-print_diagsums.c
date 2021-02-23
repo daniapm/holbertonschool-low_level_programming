@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 
 /**
  * print_diagsums - prints number
@@ -19,7 +18,7 @@ diagonal1 += a[i];
 }
 for (j = size - 1; j < size * size; j += size - 1)
 {
-if(cont < size)
+if (cont < size)
 {
 diagonal2 += a[j];
 }
