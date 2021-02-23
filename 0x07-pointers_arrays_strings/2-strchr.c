@@ -20,5 +20,9 @@ return (s + contador);
 }
 contador++;
 }
-return (NULL);
+if (s[contador] == c)
+{
+return (s + contador);
+}
+return (0);
 }

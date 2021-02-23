@@ -22,6 +22,7 @@ if (cont < size)
 {
 diagonal2 += a[j];
 }
+cont++;
 }
 printf("%d, %d\n", diagonal1, diagonal2);
 }
