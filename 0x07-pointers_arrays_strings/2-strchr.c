@@ -12,7 +12,7 @@ char *_strchr(char *s, char c)
 {
 int contador;
 contador = 0;
-for (contador = 0; s[contador]; contador++)
+while (s[contador] != '\0')
 {
 if (s[contador] == c)
 {
