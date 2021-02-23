@@ -1,0 +1,22 @@
+#include "holberton.h"
+
+/**
+ * print_diagsums - prints number
+ * @a: variable
+ * @size: variable
+ * main - Return
+ * Return: void
+ */
+
+
+
+
+
+
+
+
+
+
+_putchar (suma + a[i][j]);
+}
+}
