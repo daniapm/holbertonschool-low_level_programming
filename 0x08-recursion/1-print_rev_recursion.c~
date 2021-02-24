@@ -1,0 +1,24 @@
+#include "holberton.h"
+#include <string.h>
+
+/**
+ * _print_rev_recursion - copies memory area.
+ * @s: variable
+ * main - Return
+ * Return: void
+ */
+
+void _print_rev_recursion(char *s)
+{
+rev[1000];
+int i, j, count = 0;
+while (s[count] != '\0')
+{
+count++;
+}
+j = count - 1;
+for (i = 0; i < count; i++)
+{
+rev[i] = s[j];
+j--;
+}
