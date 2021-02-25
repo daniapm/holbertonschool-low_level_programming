@@ -1,0 +1,24 @@
+#include "holberton.h"
+
+
+/**
+ * factorial - print to strings.
+ * @n: variable
+ * main - Return
+ * Return: void
+ */
+
+int is_prime_number(int n)
+{
+int cont;
+cont = 0;
+if (n % cont == 0 || n < 2) 
+{
+return (0);
+} 
+else if (cont > n / 2)
+{
+return (1);
+}
+return is_prime_number(cont + 1);
+}
