@@ -17,6 +17,15 @@ return (-1);
 a = resultado(n, 1);
 return (a);
 }
+
+/**
+ * resultado - square root
+ * @n: variable
+ * @a: variable
+ * main - Return
+ * Return: void
+ */
+
 int resultado(int n, int a)
 {
 if (a *a > n)
