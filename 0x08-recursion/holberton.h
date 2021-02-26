@@ -13,5 +13,7 @@ int _sqrt_recursion(int n);
 int resultado(int n, int a);
 int is_prime_number(int n);
 int is_palindrome(char *s);
+int largo(char *s, int i);
+int revision(char *s, int l, int i);
 
 #endif /* HOLBERTON_H */
