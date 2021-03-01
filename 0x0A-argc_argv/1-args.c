@@ -8,13 +8,9 @@
  *
  * Return: 0 for succesful exit
  */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-int i;
-printf("%d\n", argc - 1);
-for (i = 0; i < argc; i++)
-{
-printf("%s", argv[i]);
-}
+if (*argv[0] > 0)
+printf("%i\n", argc - 1);
 return (0);
 }
