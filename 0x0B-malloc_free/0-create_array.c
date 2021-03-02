@@ -29,9 +29,5 @@ char *create_array(unsigned int size, char c)
 	a[i] = c;
 	}
 	}
-	if (a == '\0')
-	{
-	return (NULL);
-	}
 return (a);
 }
