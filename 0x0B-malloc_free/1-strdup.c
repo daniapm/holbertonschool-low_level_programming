@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
@@ -13,11 +12,11 @@ char *_strdup(char *str)
 {
 	int i;
 	char *copy;
-	copy = malloc(sizeof(*str));
 	if (str  == '\0')
 	{
 		return (NULL);
 	}
+	copy = malloc(sizeof(*str) + 1);
 	if (copy == '\0')
 	{
 		return (NULL);
