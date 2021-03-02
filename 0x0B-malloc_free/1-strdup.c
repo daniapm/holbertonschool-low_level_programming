@@ -12,6 +12,7 @@ char *_strdup(char *str)
 {
 	int i;
 	char *copy;
+
 	copy = malloc(sizeof(*str) + 1);
 	if (str  == '\0')
 	{
@@ -24,7 +25,7 @@ char *_strdup(char *str)
 	else
 	{
 	for (i = 0; str[i] != '\0'; i++)
-	{		
+	{
 	copy[i] = str[i];
 	}
 	}
