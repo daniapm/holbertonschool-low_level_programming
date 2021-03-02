@@ -18,6 +18,8 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
+	else
+	{
 	copy = malloc(sizeof(char));
 	if (copy  == '\0')
 	{
@@ -28,6 +30,7 @@ char *_strdup(char *str)
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		copy[i] = str[i];
+	}
 	}
 	}
 	return (copy);
