@@ -30,6 +30,11 @@ char *str_concat(char *s1, char *s2)
 		i++;
 	}
 	}
+	else
+	{
+		result[i] = '\0';
+		i++;
+	}
 	if (s2[0] != '\0')
 	{
 	while (s2[j] != '\0')
@@ -38,5 +43,11 @@ char *str_concat(char *s1, char *s2)
 		j++;
 	}
 	}
+	else 
+	{
+		result[i + j] = '\0';
+		j++;
+	}
+	result[i + j] = '\0';
 return (result);
 }
