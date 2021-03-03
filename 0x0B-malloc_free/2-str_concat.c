@@ -35,13 +35,10 @@ char *str_concat(char *s1, char *s2)
 		result[i] = 32;
 		i++;
 	}
-	if (s2[0] != '\0')
-	{
 	while (s2[j] != '\0')
 	{
 		result[i + j] = s2[j];
 		j++;
-	}
 	}
 return (result);
 }
