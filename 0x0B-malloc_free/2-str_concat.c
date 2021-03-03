@@ -25,7 +25,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		s2 = "";
 	}
-	result = malloc(sizeof(s1) + sizeof(s2) * 100);
+	result = malloc(sizeof(s1) + sizeof(s2) * 10000);
 	if (result == '\0')
 	{
 		return (0);
