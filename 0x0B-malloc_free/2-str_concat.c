@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
+int largo(char *s);
 
 /**
  * *str_concat - concatenate string
@@ -11,13 +12,11 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	int i, j, a, b;
+	int i, j;
 	char *result;
 
 	i = 0;
 	j = 0;
-	a = 0;
-	b = 0;
 
 	if (s1 == '\0')
 	{
@@ -27,15 +26,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		s2 = "";
 	}
-	while (s1[a] != '\0')
-	{
-		a++;
-	}
-	while (s2[b] != '\0')
-	{
-		b++;
-	}
-	result = malloc((a + 1 + b) * sizeof(char));
+	result = malloc((largo(s1) + 1 + largo(s2)) * sizeof(char));
 	if (result == '\0')
 	{
 		return (0);
@@ -52,4 +43,24 @@ char *str_concat(char *s1, char *s2)
 	}
 result [i + j] = '\0';
 return (result);
+}
+
+/**
+ * largo - largo
+ * @s: variable
+ * main - Return
+ * Return: void
+ *
+ */
+int largo(char *s)
+{
+	int i;
+
+	i = 0;
+
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
