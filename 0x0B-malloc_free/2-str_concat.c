@@ -43,7 +43,7 @@ char *str_concat(char *s1, char *s2)
 		j++;
 	}
 	}
-	else 
+	else
 	{
 		result[i + j] = '\0';
 		j++;
