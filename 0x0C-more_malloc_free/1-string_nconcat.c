@@ -46,7 +46,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		*(result + i + j) = *(s2 + j);
 	}
-	result[i + j] = '\0';
 	}
 	else if (n < largo2)
 	{
@@ -63,9 +62,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		{
 			*(result + i + j) = *(s2 + j);
 		}
-
-	result[i + j] = '\0';
 	}
+	result[i + j] = '\0';
 	return (result);
 }
 
