@@ -1,6 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
-
+#include <stdio.h>
 /**
  * *_calloc - allocates memory
  * @size: variable
@@ -19,11 +19,12 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		{
 			return (NULL);
 		}
-
+		else 
+		{
 		for (i = 0; i < size; i++)
 		{
 			a[i] = nmemb;
 		}
-
+		}
 	return (a);
 }
