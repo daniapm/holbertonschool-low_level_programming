@@ -20,9 +20,10 @@ char *argstostr(int ac, char **av)
 	contador3 = 0;
 	i = 0;
 
-
 	if (ac == 0 || av == NULL)
+	{
 	return (NULL);
+	}
 		len = 1;
 		i = 0;
 		while (i < ac)
