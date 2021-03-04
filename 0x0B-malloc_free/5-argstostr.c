@@ -33,8 +33,9 @@ char *argstostr(int ac, char **av)
 
 		concatenar = malloc(sizeof(char) * len + 1);
 		if (concatenar == NULL)
+		{
 			return (NULL);
-
+		}
 		for (contador1 = 0; contador1 < ac; contador1++)
 		{
 			for (contador2 = 0; av[contador1][contador2]; contador2++)
