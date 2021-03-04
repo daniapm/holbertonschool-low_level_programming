@@ -13,58 +13,34 @@ int _longitud(char *s);
 
 char *argstostr(int ac, char **av)
 {
-
-	char *concatenar;
-	int contador1, contador2, len, i, contador3;
-
-	contador3 = 0;
-	i = 0;
+	int cont1, cont2, cont3 = 0, longit = 0;
+	char *concat;
 
 	if (ac == 0 || av == NULL)
+		return (NULL);
+
+	for (cont1 = 0; cont1 < ac; cont1++)
 	{
-	return (NULL);
+		for (cont2 = 0; av[cont1][cont2]; cont2++)
+			longit++;
 	}
-		len = 1;
-		i = 0;
-		while (i < ac)
+	longit += ac;
+
+	concat = malloc(sizeof(char) * longit + 1);
+	if (concat == NULL)
+		return (NULL);
+
+	for (cont1 = 0; cont1 < ac; cont1++)
+	{
+		for (cont2 = 0; av[cont1][cont2]; cont2++)
 		{
-			len += _longitud(av[i]) + 1;
-			i++;
+			concat[cont3] = av[cont1][cont2];
+			cont3++;
 		}
-
-		concatenar = malloc(sizeof(char) * len + 1);
-		if (concatenar == NULL)
+		if (concat[cont3] == '\0')
 		{
-			return (NULL);
+			concat[cont3++] = '\n';
 		}
-		for (contador1 = 0; contador1 < ac; contador1++)
-		{
-			for (contador2 = 0; av[contador1][contador2]; contador2++)
-			{
-				concatenar[contador3] = av[contador1][contador2];
-				contador3++;
-			}
-			if (concatenar[contador3] == '\0')
-			{
-				concatenar[contador3++] = '\n';
-			}
-		}
-		return (concatenar);
-}
-
-/**
- * _longitud - largue
- * @s: variable
- * Return: 0 for succesful exit
- *
- */
-int _longitud(char *s)
-{
-	int i;
-
-		i = 0;
-		while (s[i] != '\0')
-			i++;
-		return (i);
-
+	}
+	return (concat);
 }
