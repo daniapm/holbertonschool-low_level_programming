@@ -13,23 +13,23 @@
 
 int *array_range(int min, int max)
 {
-	int *a, i;
+	int *a, i, len;
 
 	if (min > max)
 	{
 		return (NULL);
 	}
-	a = malloc(sizeof(int) * (min + max) + 1);
+	len = (max - min + 1);
+		a = malloc(sizeof(int) * len);
 	if (a == '\0')
 	{
 		return (NULL);
 	}
 	else
 	{
-		for (i = 0; i <= max; i++)
+		for (i = 0; i < len; i++)
 		{
-			a[i] = min;
-			min++;
+			a[i] = min++;
 		}
 	}
 	return (a);
