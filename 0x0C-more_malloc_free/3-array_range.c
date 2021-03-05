@@ -1,7 +1,7 @@
 #include "holberton.h"
 #include <stdlib.h>
 #include <stdio.h>
-int largo(char *s);
+
 
 /**
  * *array_range - allocates memory
@@ -33,25 +33,4 @@ int *array_range(int min, int max)
 		}
 	}
 	return (a);
-}
-
-/**
- * largo - largo
- * @s: variable
- * main - Return
- * Return: void
- *
- */
-
-int largo(char *s)
-{
-	int i;
-
-	i = 0;
-
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
 }
