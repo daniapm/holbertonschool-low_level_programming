@@ -22,7 +22,7 @@ char *c;
 		c = va_arg(cadena, char *);
 		if (c == NULL)
 		{
-			printf("nil");
+			printf("(nil)");
 		}
 	if (i != (n - 1) && separator != NULL)
 	{
