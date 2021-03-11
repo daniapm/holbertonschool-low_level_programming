@@ -16,10 +16,9 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_list numeros;
 	unsigned int i, valores;
 
+	va_start(numeros, n);
 	if (separator != NULL)
 	{
-	va_start(numeros, n);
-
 	for (i = 0; i < n; i++)
 	{
 		valores = va_arg(numeros, unsigned int);
