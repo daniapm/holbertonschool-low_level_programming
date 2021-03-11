@@ -18,12 +18,11 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int i;
 
 	va_start(numeros, n);
-	if (separator != NULL)
-	{
+
 	for (i = 0; i < n; i++)
 	{
 		valores = va_arg(numeros, int);
-	if (i != n - 1)
+		if (i != (n - 1) && separator != NULL)
 	{
 		printf("%d%s", valores, separator);
 	}
@@ -33,6 +32,5 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	}
 	}
 	printf("\n");
-	}
 	va_end(numeros);
 }
