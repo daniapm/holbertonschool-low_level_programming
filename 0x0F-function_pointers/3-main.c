@@ -32,7 +32,7 @@ int main(int ac, char **av)
 
 	if ((*op == '/' || *op == '%') && num2 == 0)
 	{
-		printf("Error/n");
+		printf("Error\n");
 		exit(100);
 	}
 
