@@ -24,7 +24,7 @@ char *c;
 	{
 		printf("(nil)");
 	}
-	if (i != (n - 1) && separator != NULL)
+	if (i != (n - 1) && separator != NULL && c != '\0')
 	{
 		printf("%s%s", c, separator);
 	}
