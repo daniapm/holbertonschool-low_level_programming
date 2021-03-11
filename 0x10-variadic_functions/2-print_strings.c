@@ -24,10 +24,10 @@ char *c;
 	{
 	if (c == NULL)
 	{
-		c = "(nil)";
+		printf("nil");
 	}
 		printf("%s%s", c, separator);
-      	}
+	}
 	else
 	{
 		printf("%s", c);
