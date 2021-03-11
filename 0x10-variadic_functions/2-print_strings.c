@@ -20,12 +20,12 @@ char *c;
 	for (i = 0; i < n; i++)
 	{
 		c = va_arg(cadena, char *);
-	if (i != (n - 1) && separator != NULL)
-	{
 	if (c == NULL)
 	{
-		printf("nil");
+		printf("(nil)");
 	}
+	if (i != (n - 1) && separator != NULL)
+	{
 		printf("%s%s", c, separator);
 	}
 	else
