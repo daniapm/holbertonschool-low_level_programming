@@ -20,7 +20,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	{
 	va_start(numeros, n);
 
-	for (i = 0; i < n; ++i)
+	for (i = 0; i < n; i++)
 	{
 		valores = va_arg(numeros, unsigned int);
 	if (i != n - 1)
@@ -32,10 +32,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		printf("%d", valores);
 	}
 	}
-	printf("\n");
-	}
-	else 
-	{
 	printf("\n");
 	}
 	va_end(numeros);
