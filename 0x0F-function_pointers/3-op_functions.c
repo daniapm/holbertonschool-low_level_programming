@@ -1,11 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include  "calc.h"
-#define SUMA ((a) + (b))
-#define RESTA ((a) - (b))
-#define MULT ((a) * (b))
-#define DIV ((a) / (b))
-#define MODUL ((a) % (b))
+#include "3-calc.h"
 
 /**
  * op_add - Entry Point
@@ -16,10 +11,10 @@
 
 int op_add(int a, int b)
 {
-	int s;
+	int suma;
 
-	s = SUMA(a, b);
-	return (s);
+	suma = (a + b);
+	return (suma);
 }
 
 /**
@@ -30,10 +25,10 @@ int op_add(int a, int b)
  */
 int op_sub(int a, int b)
 {
-	int r;
+	int resta;
 
-	r = RESTA(a, b);
-	return (r);
+	resta = (a - b);
+	return (resta);
 }
 
 /**
@@ -44,10 +39,10 @@ int op_sub(int a, int b)
  */
 int op_mul(int a, int b)
 {
-	int m;
+	int mult;
 
-	m = MULT(a, b);
-	return (m);
+	mult = (a * b);
+	return (mult);
 }
 
 /**
@@ -59,10 +54,10 @@ int op_mul(int a, int b)
 
 int op_div(int a, int b)
 {
-	int d;
+	int div;
 
-	d = DIV(a, b);
-	return (d);
+	div = (a / b);
+	return (div);
 }
 
 /**
@@ -74,8 +69,8 @@ int op_div(int a, int b)
 
 int op_mod(int a, int b)
 {
-	int n;
+	int mod;
 
-	n = MOD(a, b);
-	return (n);
+	mod = (a % b);
+	return (mod);
 }
