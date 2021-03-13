@@ -101,9 +101,9 @@ void _float(va_list f)
 
 void _string(va_list s)
 {
-	char *str = va_arg(s, char *);
+	char *cadena = va_arg(s, char *);
 
-	if (str == NULL)
-		str = "(nil)";
-	printf("%s", str);
+	if (cadena == NULL)
+		cadena = "(nil)";
+	printf("%s", cadena);
 }
