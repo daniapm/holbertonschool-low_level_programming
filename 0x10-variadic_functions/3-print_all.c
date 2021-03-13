@@ -27,11 +27,14 @@ void print_all(const char * const format, ...)
 		{NULL, NULL}
 	};
 	va_list value;
+	char *sep1;
+	char *sep2;
 
 	va_start(value, format);
 
 	i = 0;
-
+	sep1 = "";
+	sep2 = ", ";
 	while (format[i] != '\0')
 	{
 		j = 0;
@@ -39,8 +42,10 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == funt[j].a[0])
 			{
+				printf("%s", sep1);
 				funt[j].f(value);
-				printf(", ");
+				sep1 = sep2;
+				
 			}
 		j++;
 		}
