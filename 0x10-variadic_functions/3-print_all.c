@@ -99,10 +99,9 @@ void _float(va_list f)
 
 void _string(va_list s)
 {
-	char *str;
+	char *str = va_arg(s, char *);
 
-	str = va_arg(s, char *);
-	if (s == NULL)
+	if (str == NULL)
 		str = "(nil)";
 	printf("%s", str);
 }
