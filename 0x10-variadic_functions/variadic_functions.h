@@ -1,18 +1,20 @@
 #ifndef DOG_H
 #define DOG_H
 
+#include <stdarg.h>
+
 /**
- * struct op - Struct op
+ * struct tip - Struct op
  *
- * @op: The operator
+ * @a: The operator
  * @f: The function associated
  */
 
-typedef struct op
+typedef struct tip
 {
-	char *op;
-	int (*f)(, ... a);
-} op_t;
+	char *a;
+	void (*f)(va_list);
+}tip_o;
 
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);

@@ -2,7 +2,11 @@
 #include <stdlib.h>
 #include "variadic_functions.h"
 #include <stdarg.h>
-int (*get_op_func(char *s))(int, int);
+void _char(va_list c);
+void _string(va_list s);
+void _int(va_list i);
+void _float(va_list f);
+
 
 /**
  * print_all - Entry Point
@@ -12,44 +16,83 @@ int (*get_op_func(char *s))(int, int);
 
 void print_all(const char * const format, ...)
 {
-	int i;
-	va_list vl;
-	const c;
-	va_start(vl, format);
-	for (i = 0; i < format; i++)
+
+	unsigned int i, j;
+
+	tip_o funt[] = {
+		{"c", _char},
+		{"i", _int},
+		{"f", _float},
+		{"s", _string},
+		{NULL, NULL}
+	};
+	va_list value;
+
+	va_start(value, format);
+
+	i = 0;
+
+	while (format[i] != '\0')
 	{
-		c = va_arg(vl, void *);
-		printf("%.ops[i].f", c);
+		j = 0;
+		while (funt[j].a != NULL)
+		{
+			if (format[i] == funt[j].a[0])
+			{
+				funt[j].f(value);
+				printf(", ");
+			}
+		j++;
+		}
+		i++;
 	}
-	va_end(vl);
+	printf("\n");
+		va_end(value);
 }
 
 /**
- * *get_op_func - Entry Point
- * @s: variable
- * Return: 0
+ * _char - char
+ * @c: varable char
+ *
+ * Return: void
+ */
+void _char(va_list c)
+{
+	printf("%c", va_arg(c, int));
+}
+
+/**
+ * _int - int
+ * @i: varable int
+ *
+ * Return: void
  */
 
-	int (*(char *s))(int, int)
-	{
-		op_t ops[] = {
-			{"char", c},
-			{"int", i},
-			{"float", f}
-			{"char *", s},
-			{NULL, NULL}
-		};
-		int i;
+void _int(va_list i)
+{
+	printf("%d", va_arg(i, int));
+}
 
-		i = 0;
+/**
+ * _float - float
+ * @f: varable float
+ *
+ * Return: void
+ */
 
-		while (ops[i].f != NULL)
-		{
-			if (strcmp(s, ops[i].op) == 0)
-			{
-				return (ops[i].f);
-			}
-			i++;
-		}
-		return (NULL);
-	}
+void _float(va_list f)
+{
+	printf("%f", va_arg(f, double));
+}
+
+/**
+ * _string - string
+ * @s: varable srting
+ *
+ * Return: void
+ */
+
+void _string(va_list s)
+{
+	printf("%s", va_arg(s, char *));
+}
