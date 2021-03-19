@@ -12,13 +12,10 @@
 
 void free_list(list_t *head)
 {
-list_t *curr = head;
-list_t *next;
-while (curr->next)
-	{
-next = curr->next;
-free(curr);
-curr = next;
-}
-head = NULL;
+list_t *test = head;
+
+        while(head !=NULL)
+		{
+            free(test);
+        }
 }
