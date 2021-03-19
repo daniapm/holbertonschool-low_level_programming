@@ -21,8 +21,6 @@ nuevo_nodo = malloc(sizeof(list_t));
 	{
 		return (NULL);
 	}
-	else
-	{
 nuevo_nodo->str = strdup(str);
 	if (nuevo_nodo->str == NULL)
 	{
@@ -31,7 +29,6 @@ nuevo_nodo->str = strdup(str);
 nuevo_nodo->len = _strlen(nuevo_nodo->str);
 		nuevo_nodo->next = *head;
 	*head = nuevo_nodo;
-	}
 return (nuevo_nodo);
 }
 
