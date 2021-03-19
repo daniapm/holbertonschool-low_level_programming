@@ -1,14 +1,18 @@
-global      _start
-	section     .text
-_start:
-	    mov         rax,1
-	    mov         rdi,1
-	    mov         rsi,message
-	    mov         rdx,18
-	    syscall
-	    mov         rax,60
-	    xor         rdi,rdi
-	    syscall
+	;;  Hello World Program - asmtutor.com
+	;;  Compile with: nasm -f elf helloworld.asm
+	;;  Link with (64 bit systems require elf_i386 option): ld -m elf_i386 helloworld.o -o helloworld
+	;;  Run with: ./helloworld
 
-	section     .data
-message:	    db          "Hello, Holberton", 10
+	SECTION .data
+	msg     db      'Hello, Holberton', 0Ah ; assign msg variable with your message string
+
+	SECTION .text
+	global  _start
+
+_start:
+
+	    mov     edx, 17     ; number of bytes to write - one for each letter plus 0Ah (line feed character)
+	    mov     ecx, msg    ; move the memory address of our message string into ecx
+	    mov     ebx, 1      ; write to the STDOUT file
+	    mov     eax, 4      ; invoke SYS_WRITE (kernel opcode 4)
+	    int     80h
