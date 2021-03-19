@@ -17,6 +17,7 @@ const list_t *nodo;
 
 	nodo = h;
 	i = 0;
+
 	while (nodo)
 	{
 		nodo = nodo->next;
