@@ -13,14 +13,14 @@
 void free_list(list_t *head)
 {
 
-list_t *tmp;
+list_t *nuevo_nodo, *tmp;
 
-tmp = head;
-while (tmp != NULL)
+nuevo_nodo = head;
+while (nuevo_nodo != NULL)
 {
-tmp = tmp->next;
-	   free(tmp->str);
-	   free(tmp);
-	   tmp = head;
+	tmp = nuevo_nodo->next;
+	   free(nuevo_nodo->str);
+	   free(nuevo_nodo);
+	   nuevo_nodo = tmp;
 }
 }
