@@ -20,7 +20,7 @@ nuevo_nodo = malloc(sizeof(list_t));
 if (nuevo_nodo != NULL)
 	{
 nuevo_nodo->str = strdup(str);
-if (nuevo_nodo->str)
+if (nuevo_nodo->str != NULL)
 	{
 nuevo_nodo->len = _strlen(nuevo_nodo->str);
 		nuevo_nodo->next = *head;
