@@ -12,15 +12,13 @@
 
 void free_list(list_t *head)
 {
-
-list_t *nuevo_nodo, *tmp;
-
-nuevo_nodo = head;
-while (nuevo_nodo != NULL)
 {
-	tmp = nuevo_nodo->next;
-	   free(nuevo_nodo->str);
-	   free(nuevo_nodo);
-	   nuevo_nodo = tmp;
+	if (head == NULL)
+		return;
+
+	if (head->next != NULL)
+		free_list(head->next);
+	free(head->str);
+	free(head);
 }
 }
