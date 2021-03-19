@@ -15,11 +15,10 @@ size_t print_list(const list_t *h)
 
 	i = 0;
 	nodo = h;
-	while (nodo != NULL)
+	for (i = 0; nodo; i++)
 	{
 	printf("[%d] %s\n", nodo->len, nodo->str);
 	nodo = nodo->next;
-		i++;
 	}
 	return (i);
 }
