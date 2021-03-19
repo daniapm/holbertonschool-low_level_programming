@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "lists.h"
 #include <string.h>
-int _strlen(char *str);
+unsigned int _strlen(char *str);
 
 
 /**
@@ -38,7 +38,7 @@ return (nuevo_nodo);
  * Return: 0
  */
 
-int _strlen(char *str)
+unsigned int _strlen(char *str)
 {
 	int i = 0;
 
