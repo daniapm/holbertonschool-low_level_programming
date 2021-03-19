@@ -13,6 +13,8 @@ void free_list(list_t *head)
 {
 	list_t *puntero;
 
+	if (head == NULL)
+		return;
 	while (head != NULL)
 	{
 		puntero = head->next;
