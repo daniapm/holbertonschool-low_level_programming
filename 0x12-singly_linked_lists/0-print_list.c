@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include "lists.h"
 
 /**
@@ -15,10 +14,11 @@ size_t print_list(const list_t *h)
 
 	i = 0;
 	nodo = h;
-	for (i = 0; nodo; i++)
+	while (nodo != NULL)
 	{
 	printf("[%d] %s\n", nodo->len, nodo->str);
 	nodo = nodo->next;
+	i++;
 	}
 	return (i);
 }
