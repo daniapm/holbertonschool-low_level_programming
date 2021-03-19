@@ -14,8 +14,8 @@ void free_list(list_t *head)
 {
 list_t *test = head;
 
-        while(head !=NULL)
-		{
-            free(test);
-        }
+while (head != NULL)
+{
+	free(test);
+}
 }
