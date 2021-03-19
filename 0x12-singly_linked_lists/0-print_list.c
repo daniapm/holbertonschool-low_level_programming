@@ -10,13 +10,13 @@
 size_t print_list(const list_t *h)
 {
 	const list_t *nodo;
-	size_t i;
+	unsigned int i;
 
 	i = 0;
 	nodo = h;
 	while (nodo != NULL)
 	{
-	printf("[%d] %s\n", nodo->len, nodo->str);
+	printf("[%u] %s\n", nodo->len, nodo->str);
 	nodo = nodo->next;
 	i++;
 	}
