@@ -1,6 +1,6 @@
 sección .data
 
-	    mensaje db "¡Hola, mundo!" , 10
+	    mensaje db "Hello, Holberton" , 10
 
 	sección .text
 
