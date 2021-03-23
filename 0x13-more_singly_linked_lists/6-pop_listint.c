@@ -11,7 +11,7 @@
 
 int pop_listint(listint_t **head)
 {
-int retval = -1;
+int retval;
 
 listint_t *next_node = NULL;
 
@@ -23,6 +23,5 @@ next_node = (*head)->next;
 retval = (*head)->n;
 free(*head);
 *head = next_node;
-
 return (retval);
 }
