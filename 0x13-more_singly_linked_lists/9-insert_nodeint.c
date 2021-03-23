@@ -34,6 +34,10 @@ tmp = *head;
 while (idx - 1 > 0)
 	{
 tmp = tmp->next;
+if (tmp == NULL)
+{
+	return (NULL);
+}
 idx--;
 }
 
