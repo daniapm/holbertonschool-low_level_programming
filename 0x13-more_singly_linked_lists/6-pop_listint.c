@@ -19,9 +19,9 @@ if (*head == NULL)
 {
 return (0);
 }
-next_node = (*head)->next;
-n = (*head)->n;
-free(*head);
-*head = next_node;
+next_node = *head;
+*head = next_node->next;
+n = next_node->n;
+free(next_node);
 return (n);
 }
