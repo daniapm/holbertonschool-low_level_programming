@@ -40,9 +40,8 @@ if (tmp == NULL)
 }
 idx--;
 }
-
 nuevo_nodo->next = tmp->next;
 tmp->next = nuevo_nodo;
 
-return (*head);
+return (nuevo_nodo);
 }
