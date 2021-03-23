@@ -6,7 +6,7 @@
 /**
  * *get_nodeint_at_index - Entry Point
  * @head: variable
- * index: variable
+ * @index: variable
  * Return: 0
  */
 
