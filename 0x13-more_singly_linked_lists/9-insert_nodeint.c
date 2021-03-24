@@ -42,6 +42,5 @@ idx--;
 }
 nuevo_nodo->next = tmp->next;
 tmp->next = nuevo_nodo;
-
 return (nuevo_nodo);
 }
