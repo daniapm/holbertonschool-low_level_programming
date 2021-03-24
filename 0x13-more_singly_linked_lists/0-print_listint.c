@@ -10,19 +10,16 @@
 
 size_t print_listint(const listint_t *h)
 {
-	const listint_t *nodo;
+
 	size_t i;
 
 	i = 0;
-	nodo = h;
 
-	while (nodo)
+	while (h)
 	{
-	printf("%d\n", nodo->n);
-	nodo = nodo->next;
+	printf("%d\n", h->n);
+	h = h->next;
 	i++;
 	}
 	return (i);
 }
-
-
