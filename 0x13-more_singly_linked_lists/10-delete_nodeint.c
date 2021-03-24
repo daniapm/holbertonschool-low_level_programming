@@ -27,7 +27,7 @@ return (1);
 }
 for (i = 0; temp != NULL && i < index - 1; i++)
 temp = temp->next;
-if (temp == NULL || temp->next == NULL)
+if (temp->next == NULL)
 return (-1);
 sig = temp->next->next;
 *temp->next = *sig;
