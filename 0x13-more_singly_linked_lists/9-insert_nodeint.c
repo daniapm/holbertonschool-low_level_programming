@@ -23,7 +23,7 @@ return (NULL);
 nuevo_nodo->n = n;
 if (head == NULL)
 {
-return (nuevo_nodo);
+return (NULL);
 }
 if (idx == 0)
 {
