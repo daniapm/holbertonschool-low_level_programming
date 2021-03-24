@@ -23,10 +23,6 @@ if (nuevo_nodo == NULL)
 return (NULL);
 }
 nuevo_nodo->n = n;
-if (head == NULL || *head == NULL)
-{
-return (NULL);
-}
 if (idx == 0)
 {
 nuevo_nodo->next = *head;
