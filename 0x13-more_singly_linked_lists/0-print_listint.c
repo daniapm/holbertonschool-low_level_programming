@@ -16,7 +16,7 @@ size_t print_listint(const listint_t *h)
 	i = 0;
 	nodo = h;
 
-	while (nodo != NULL)
+	while (nodo)
 	{
 	printf("%d\n", nodo->n);
 	nodo = nodo->next;
