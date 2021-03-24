@@ -18,6 +18,7 @@ unsigned int i;
 
 if (!head)
 return (-1);
+temp = *head;
 if (index == 0)
 {
 temp = (*head)->next;
@@ -30,5 +31,5 @@ if (temp == NULL || temp->next == NULL)
 return (-1);
 sig = temp->next->next;
 *temp->next = *sig;
-return (-1);
+return (1);
 }
