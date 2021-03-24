@@ -28,6 +28,7 @@ return (NULL);
 if (idx == 0)
 {
 nuevo_nodo->next = *head;
+*head = nuevo_nodo;
 return (*head);
 }
 tmp = *head;
