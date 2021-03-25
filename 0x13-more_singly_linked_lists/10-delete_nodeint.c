@@ -28,7 +28,7 @@ unsigned int ctr = 0;
 	}
 	while (temp_h)
 	{
-		if (ctr ++ 1 == index)
+		if (ctr + 1 == index)
 		{
 			temp_node = temp_h->next;
 			temp_h->next = temp_node->next;
