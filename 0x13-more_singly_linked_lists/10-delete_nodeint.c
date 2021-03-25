@@ -21,6 +21,13 @@ unsigned int contador = 1;
 		return (-1);
 	}
 	node = *head;
+	if (index == 0)
+	{
+		new = node->next;
+		*head = new;
+		free(node);
+		return (1);
+	}
 	while (node)
 	{
 		if (contador == index)
@@ -34,11 +41,5 @@ unsigned int contador = 1;
 		contador++;
 	}
 	return (-1);
-	if (index == 0)
-	{
-		new = node->next;
-		*head = new;
-		free(node);
-		return (1);
-	}
+
 }
