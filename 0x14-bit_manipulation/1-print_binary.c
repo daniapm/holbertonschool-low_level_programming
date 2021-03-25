@@ -5,27 +5,24 @@
 
 
 /**
- * reverse_listint - Entry Point
- * @head: variable
+ * print_binary - Entry Point
+ * @n: variable
  * Return: 0
  */
 
 void print_binary(unsigned long int n)
 {
-int n, bin[1024]:
-int i;
-i = 0;
-while (n != 0)
+
+unsigned int i;
+for (i = 8 * sizeof(i); i-- != 0;)
 {
-	bin[i] = n % 2;
-	n = n / 2;
-	i++;
+char c;
+if ((n & (1UL << i)) != 0)
+c = '1';
+else
+c = '0';
+
+printf("%c", c);
+
 }
-i--;
-while (i >= 0)
-{
-	return (bin[i]);
-	i--;
-}
-return (0);
 }
