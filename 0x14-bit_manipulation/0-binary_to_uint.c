@@ -24,7 +24,7 @@ len = _starlen(b);
 
 for (c = len - 1; c >= 0; c--)
 {
-if (b[c] != '0' || b[c] != '1')
+if (b[c] != '0' && b[c] != '1')
 {
 	return (0);
 }
