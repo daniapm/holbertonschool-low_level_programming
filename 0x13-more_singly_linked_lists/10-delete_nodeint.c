@@ -19,11 +19,11 @@ unsigned int ctr = 0;
 	if (!*head)
 		return (-1);
 	temp_h = *head;
-	if (index != 0)
+	if (index == 0)
 	{
 	while (temp_h)
 	{
-		if (ctr < index)
+		if (ctr + 1 == index)
 		{
 			nuevo_node = temp_h->next;
 			temp_h->next = nuevo_node->next;
