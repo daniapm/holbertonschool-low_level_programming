@@ -18,7 +18,6 @@ unsigned int mask;
 if (index > (sizeof(unsigned long int) * 8 - 1))
 return (-1);
 mask = (1 << index);
-mask = (1 << index);
 *n = mask | *n;
 return (1);
 }
