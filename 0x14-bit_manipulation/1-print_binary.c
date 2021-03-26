@@ -12,17 +12,21 @@
 
 void print_binary(unsigned long int n)
 {
-
 unsigned int i;
-for (i = 8 * sizeof(i); i-- != 0;)
+if (n == 0)
 {
-char c;
-if ((n & (1UL << i)) != 0)
-c = '1';
-else
-c = '0';
+printf("0");
+return;
+}
 
-printf("%c", c);
-
+if (n == 1)
+{
+printf("1");
+return;
+}
+for (i = 0; i < 31; i++)
+{
+printf("%c", ((n & (0x80000000)) ? '1' : '0'));
+n = n << 1;
 }
 }
