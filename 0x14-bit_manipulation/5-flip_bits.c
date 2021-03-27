@@ -16,7 +16,7 @@ int distance = 0;
 unsigned int val;
 val = n ^ m;
 
-if (distance <= 32)
+if (distance < 32)
 while (val)
 {
 distance++;
