@@ -36,7 +36,7 @@ if (fd == -1)
 {
 return (0);
 }
-imprimir = write(1, buffer, fd);
+imprimir = write(STDOUT_FILENO, buffer, fd);
 if (imprimir == -1)
 {
 return (0);
