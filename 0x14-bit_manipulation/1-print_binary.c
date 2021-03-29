@@ -12,7 +12,7 @@
 
 void print_binary(unsigned long int n)
 {
-unsigned int i;
+
 if (n == 0)
 {
 printf("0");
@@ -24,9 +24,10 @@ if (n == 1)
 printf("1");
 return;
 }
-for (i = 0; i < 31; i++)
+if (n > 1)
 {
-printf("%c", ((n & (0x80000000)) ? '1' : '0'));
-n = n << 1;
+print_binary(n >> 1);
+
+putchar(48 + (n & 1));
 }
 }

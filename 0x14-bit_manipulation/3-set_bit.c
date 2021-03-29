@@ -13,11 +13,9 @@
 
 int set_bit(unsigned long int *n, unsigned int index)
 {
-unsigned int len, b;
+unsigned int b;
 
-len = (*n) * 8 - 1;
-
-if (index > len)
+if (index > 32)
 {
 return (-1);
 }
