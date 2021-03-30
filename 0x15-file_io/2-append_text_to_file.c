@@ -22,7 +22,7 @@ if (filename == NULL)
 {
 return (0);
 }
-file = open(filename, O_APPEND);
+file = open(filename, O_APPEND | O_RDWR);
 if (file == -1)
 {
 return (-1);
