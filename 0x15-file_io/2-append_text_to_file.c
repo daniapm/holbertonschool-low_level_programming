@@ -30,7 +30,7 @@ return (-1);
 if (text_content != NULL)
 {
 imprimir = write(file, text_content, _strlen(text_content));
-if (imprimir < 0)
+if (imprimir == -1)
 {
 return (-1);
 }
