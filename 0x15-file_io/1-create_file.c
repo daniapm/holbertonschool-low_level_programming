@@ -19,7 +19,7 @@ int file, imprimir;
 
 if (filename == NULL)
 {
-return (0);
+return (-1);
 }
 file = open(filename, O_WRONLY | O_CREAT | O_TRUNC | S_IRUSR | S_IWUSR);
 if (file == -1)
