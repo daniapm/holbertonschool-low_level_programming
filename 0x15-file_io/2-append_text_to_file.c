@@ -20,9 +20,9 @@ int file, imprimir;
 
 if (filename == NULL)
 {
-return (0);
+return (-1);
 }
-file = open(filename, O_RDWR | O_CREAT | O_APPEND);
+file = open(filename, O_RDWR | O_APPEND);
 if (file == -1)
 {
 return (-1);
