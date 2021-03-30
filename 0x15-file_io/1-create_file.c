@@ -22,10 +22,6 @@ if (filename == NULL)
 return (0);
 }
 file = open(filename, O_WRONLY | O_CREAT | O_TRUNC | S_IRUSR | S_IWUSR);
-if (file < 0)
-{
-return (0);
-}
 if (file == -1)
 {
 return (-1);
