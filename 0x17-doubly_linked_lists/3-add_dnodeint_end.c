@@ -14,24 +14,28 @@ dlistint_t *crear_nodo(int n);
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
 dlistint_t *tmp, *aux;
-tmp = malloc(sizeof(dlistint_t));
 
+aux = *head;
+tmp = malloc(sizeof(dlistint_t));
 if (tmp == NULL)
 {
 	return (NULL);
 }
-tmp->n = n;
-tmp->next = NULL;
 if (*head == NULL)
 {
-tmp->prev = NULL;
-*head = tmp;
-}
-		while (aux->next)
-		{
-		aux = aux->next;
-		}
-		tmp->prev = aux;
-		aux->next = tmp;
+	tmp->next = NULL;
+	tmp->n = n;
+	tmp->prev = NULL;
+	*head = tmp;
 	return (tmp);
+}
+	while (aux->next)
+	{
+	aux = aux->next;
+	}
+	aux->next = tmp;
+	tmp->prev = aux;
+	tmp->next = NULL;
+	tmp->n = n;
+return (tmp);
 }
