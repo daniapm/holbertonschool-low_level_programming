@@ -43,13 +43,12 @@ return (nuevo_nodo);
 		{
 			return (NULL);
 		}
-			else if (tmp->next)
+			if (tmp->next)
 			{
 				tmp->next->prev = nuevo_nodo;
+			}
 				nuevo_nodo->next = tmp->next;
 				nuevo_nodo->prev = tmp;
 				tmp->next = nuevo_nodo;
-
-			}
 			return (nuevo_nodo);
 }
