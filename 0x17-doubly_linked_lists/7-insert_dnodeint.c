@@ -43,7 +43,7 @@ return (nuevo_nodo);
 		{
 			return (NULL);
 		}
-		if (tmp->next)
+		else if (tmp->next)
 		{
 			tmp->next->prev = nuevo_nodo;
 			nuevo_nodo->next = tmp->next;
