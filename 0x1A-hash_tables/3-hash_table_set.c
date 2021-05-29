@@ -18,11 +18,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (strcmp(key, "") == 0 || key == NULL || ht == NULL)
 		return (0);
 
-	if (ht->array[count] == NULL)
-	{
-		ht->array[count] = create_items(key, value);
-		return (0);
-	}
 	while (ht->array[count] != NULL)
 	{
 		if (strcmp(ht->array[count]->key, key) == 0)
