@@ -20,6 +20,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	while (ht->array[count] != NULL)
 	{
+
 		if (strcmp(ht->array[count]->key, key) == 0)
 		{
 			new_value = strdup(value);
