@@ -11,8 +11,9 @@ unsigned long int key_index(const unsigned char *key, unsigned long int size)
 {
 
 	unsigned int hash_val = 0;
+	unsigned int i;
 
-	for (unsigned int i = 0; key[i]; i++)
+	for (i = 0; key[i]; i++)
 	{
 		hash_val += key[i];
 	}
