@@ -11,46 +11,41 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int count;
-	hash_node_t *hash_node;
+	hash_node_t *has_new = NULL;
+	hash_node_t *new_node = NULL;
+	char *new_value;
 
-	count = key_index((const unsigned char *)key, ht->size);
-	if (strcmp(key, "") == 0 || key == NULL || ht == NULL)
+	if (ht == NULL)
 		return (0);
+	new_value = strdup(value);
+	if (new_value == NULL)
+		return (0);
+	count = key_index((unsigned char *)key, ht->size);
 
-	hash_node = create_items(key, value);
-	if (hash_node == NULL)
+	has_new = ht->array[count];
+	while (has_new)
+	{
+		if (strcmp(has_new->key, key) == 0)
+		{
+			free(has_new->value);
+			has_new->value = new_value;
+			has_new->value = strdup(value);
+			free(new_value);
+			return (1);
+		}
+		has_new = has_new->next;
+	}
+	new_node = create_items(key, value);
+	if (new_node == NULL)
 	{
 		return (0);
 	}
-	if (ht->array[count] != NULL)
-	{
-		while (ht->array[count] != NULL)
-		{
-			if (strcmp(ht->array[count]->key, key) == 0)
-			{
-				break;
-			}
-			ht->array[count] = ht->array[count]->next;
-		}
-		if (ht->array[count] == NULL)
-		{
-			hash_node->next = ht->array[count];
-			ht->array[count] = hash_node;
-		}
-		else
-		{
-			free(ht->array[count]->value);
-			ht->array[count]->value = strdup(value);
-		}
-
-	}
-	else
-	{
-		hash_node->next = NULL;
-		ht->array[count] = hash_node;
-	}
-	return (0);
+	new_node->value = new_value;
+	new_node->next = ht->array[count];
+	ht->array[count] = new_node;
+	return (1);
 }
+
 /**
  * create_items - function that adds an element to the hash table.
  * @key: key
