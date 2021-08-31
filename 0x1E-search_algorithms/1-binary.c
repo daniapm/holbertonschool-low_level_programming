@@ -14,6 +14,9 @@ int start, end, i, mid;
 start = 0;
 end = size - 1;
 
+if (array == NULL)
+	return (-1);
+
 while (start <= end)
 {
 	mid = (start + end) / 2;
