@@ -1,7 +1,7 @@
 #include "search_algos.h"
 
 /**
- * linear_searc - function that searches for a value using the Linear search algorithm
+ * binary_search - function that searches using the Binary search algorithm
  * @size: variable
  * @array:  is a pointer to the first element
  * @value: he value to search for
@@ -10,11 +10,13 @@
 
 int binary_search(int *array, size_t size, int value)
 {
-int start = 0;
-int end = size - 1;
-while(start <= end)
+int start, end, size;
+start = 0;
+end = size - 1;
+
+while (start <= end)
 {
-	int mid = (start + end) / 2;
+	mid = (start + end) / 2;
 	printf("Searching in array: ");
 	for (int i = start; i <= end; i++)
 	{
@@ -22,18 +24,18 @@ while(start <= end)
 		{
 			printf("%d, ", array[i]);
 		}
-		else 
+		else
 			printf("%d", array[i]);
 	}
 	printf("\n");
-    if(array[mid] == value)
+	if (array[mid] == value)
 	{
-        return mid;
+		return (mid);
 	}
-    else if(array[mid]<value)    
-        start = mid + 1;
-    else    
-        end = mid - 1;
+	else if (array[mid] < value)
+		start = mid + 1;
+	else
+		end = mid - 1;
 }
-    return -1;
+	return (-1);
 }
