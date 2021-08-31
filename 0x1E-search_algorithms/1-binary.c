@@ -20,13 +20,13 @@ if (array == NULL)
 while (start <= end)
 {
 	mid = (start + end) / 2;
+
 	printf("Searching in array: ");
-	for (i = start; i <= end; i++)
+
+	for (i = start; i <= end; ++i)
 	{
-		if (array[i] != end)
-		{
-			printf("%d, ", array[i]);
-		}
+		if (i != start)
+			printf(", %d", array[i]);
 		else
 			printf("%d", array[i]);
 	}
